@@ -43,7 +43,7 @@ const OrdersTable = () => {
             <th className="py-2 px-4">Order Items</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-200">
+        <tbody className="divide-y divide-gray-200 font-bold">
           {orders.map((order) => (
             <tr key={order.id}>
               <td className="py-3 px-4">{order.id}</td>
