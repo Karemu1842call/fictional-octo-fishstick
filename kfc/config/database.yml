@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: karemu200018
+  password: mydb
+development:
+  <<: *default
+  database: kfc_development
+
+
+production:
+  <<: *default
+  database: kfc_production
+  username: kfc
+  password: <%= ENV["KFC_DATABASE_PASSWORD"] %>
